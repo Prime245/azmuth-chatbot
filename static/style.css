@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(to bottom, #0b0b0b, #1e1e1e);
+  background: url('https://images5.alphacoders.com/916/916247.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000;
   color: #e0ffe0;
   display: flex;
   justify-content: center;
@@ -14,35 +16,39 @@ body {
   width: 450px;
   max-width: 95%;
   padding: 20px;
-  background: #111;
-  border: 2px solid #00ff88;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #ffd500;
   border-radius: 16px;
-  box-shadow: 0 0 25px #00ff88;
+  box-shadow: 0 0 25px #c8ff00;
   display: flex;
   flex-direction: column;
   align-items: center;
+  backdrop-filter: blur(4px);
 }
 
 h1 {
-  color: #00ff88;
+  color: #ffcc00;
   text-align: center;
   margin-bottom: 10px;
+  text-shadow: 0 0 8px #000;
 }
 
 .chat-box {
+  background: url('https://dapsmagic.com/wp-content/uploads/2016/11/doctor-strange.jpeg') no-repeat center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.65); /* fallback dimming */
+  backdrop-filter: blur(4px); 
   width: 100%;
   height: 360px;
   overflow-y: auto;
-  background: url('https://assets.mycast.io/characters/azmuth-1233874-normal.jpg?1606615017') no-repeat center center;
-  background-size: cover;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
   scroll-behavior: smooth;
+  position: relative;
+  z-index: 1;
 }
 
 .message {
@@ -53,17 +59,18 @@ h1 {
   line-height: 1.5;
   word-wrap: break-word;
   animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(2px);
 }
 
 .user {
-  background-color: #00ff88;
+  background-color: #bbff00;
   color: #000;
   align-self: flex-end;
   border-bottom-right-radius: 0;
 }
 
 .bot {
-  background-color: #1e1e1e;
+  background-color: rgba(30, 30, 30, 0.85);
   color: #00e0ff;
   align-self: flex-start;
   border-bottom-left-radius: 0;
@@ -79,7 +86,7 @@ h1 {
   flex: 1;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #00ff88;
+  border: 1px solid #ffd500;
   background: #1a1a1a;
   color: #fff;
   outline: none;
@@ -87,7 +94,7 @@ h1 {
 
 button {
   padding: 10px 12px;
-  background: #00ff88;
+  background: #ff9d00;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -97,7 +104,7 @@ button {
 }
 
 button:hover {
-  background: #00cc66;
+  background: #ffaa33;
 }
 
 .typing {
@@ -110,6 +117,21 @@ button:hover {
   50% {
     opacity: 0.5;
   }
+}
+
+.speak-button {
+  margin-left: 10px;
+  padding: 2px 8px;
+  font-size: 0.9em;
+  background-color: #ffaa00;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.speak-button:hover {
+  background-color: #ffc34d;
 }
 
 @keyframes fadeIn {
